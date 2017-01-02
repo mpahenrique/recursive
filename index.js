@@ -22,13 +22,18 @@ function recursiveRequire(path){
     return target;
 }
 
-function recursiveRun(object, paramToPass){
-    for(let item in object){
-        if(typeof object[item] == 'object') {
-            recursiveRun(object[item], paramToPass);
+function recursiveRun(modules, paramToPass){
+
+    if(typeof modules === 'string') {
+        modules = recursiveRequire(modules);
+    }
+
+    for(let item in modules){
+        if(typeof modules[item] === 'object') {
+            recursiveRun(modules[item], paramToPass);
             continue;
         }
-        object[item](paramToPass);
+        modules[item](paramToPass);
     }
 }
 
