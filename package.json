@@ -1,6 +1,6 @@
 {
   "name": "recursivejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load and run modules recursively. With recursive.js you'll can load modules and access them by a simple object.",
   "main": "index.js",
   "scripts": {
