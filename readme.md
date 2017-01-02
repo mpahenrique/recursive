@@ -10,9 +10,6 @@ With recursive.js you'll can load modules and access them by a simple object.
 	    ├── index.js             >>>>               index : data, 
 	    └── test                                    test  : {
 	        └── something.js                            something : data } } }
-	                                                }
-	                                            }
-                                            }
 # data can be anything that the js file exports
 ```
 
