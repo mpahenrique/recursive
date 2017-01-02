@@ -15,6 +15,8 @@ $ npm install https://github.com/mpahenrique/recursive.git
 ```js
 var recursive = require('recursive')
 ,   modules   = recursive.require('./modules');
+
+modules.someSubModule.doSomething('RecursiveJs');
 ```
 
 [Underscore]: <https://www.npmjs.com/package/underscore>
