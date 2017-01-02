@@ -8,7 +8,7 @@ Recursive JS uses just one dependencie:
 
 ### Installation
 ```sh
-$ npm install https://github.com/mpahenrique/recursive.git
+$ npm install recursivejs --save
 ```
 
 ### Usage
