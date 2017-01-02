@@ -6,10 +6,10 @@ With recursive.js you'll can load modules and access them by a simple object.
 .
 └── views                                   {
     ├── index.js                                index  : data, 
-	└── sample                   INTO           sample : {
+	└── sample                    TO            sample : {
 	    ├── index.js             >>>>               index : data, 
 	    └── test                                    test  : {
-	        └── something.js                            something : data
+	        └── something.js                            something : data } } }
 	                                                }
 	                                            }
                                             }
@@ -28,9 +28,10 @@ $ npm install recursivejs --save
 ### Usage
 ```js
 var recursive = require('recursive')
-,   modules   = recursive.require('./modules');
+,   views     = recursive.require('./views'); // views, like sample above
 
-modules.someSubModule.doSomething('RecursiveJs');
+// Assuming that something.js exports method 'doSomething':
+views.sample.test.something.doSomething('RecursiveJs');
 ```
 
 [Underscore]: <https://www.npmjs.com/package/underscore>
